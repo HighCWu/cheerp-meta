@@ -51,6 +51,7 @@ class NuitkaPluginWebAssemblyWorkarounds(NuitkaPluginBase):
         return {
             "__linux__": "",
             "__x86_64__": "",
+            "_ILP32": "1", # For Cheerp
             # "__LP64__": "",
             # "SIZEOF_LONG": "8",
             # "LONG_BIT": "64",
