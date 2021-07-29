@@ -43,7 +43,7 @@ class NuitkaPluginWebAssemblyWorkarounds(NuitkaPluginBase):
         cc_flags += " -I/usr/include/"
         cc_flags += " -I/usr/include/x86_64-linux-gnu/"
         # cc_flags += " --target=wasm64"
-        cc_flags += "-target cheerp"
+        cc_flags += " -target cheerp"
         os.environ["CCFLAGS"] = cc_flags
 
     @staticmethod
