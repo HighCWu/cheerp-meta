@@ -21,10 +21,18 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      # Install libc6 32
+      - name: Install libc6 32
+        run: apt-get install -y libc6-dev-i386
 
       # Install Nuitka
       - name: Install Nuitka
         run: pip install nuitka
+        
+      # Print cheerp marcos
+      - name: Print cheerp marcos
+        run: /opt/cheerp/bin/clang -dM -E - < /dev/null
         
       # Nuitka build to WebAssembly test
       - name: Nuitka build to WebAssembly test
