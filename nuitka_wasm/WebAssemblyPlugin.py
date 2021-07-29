@@ -44,7 +44,7 @@ class NuitkaPluginWebAssemblyWorkarounds(NuitkaPluginBase):
         cc_flags += " -I/usr/include/x86_64-linux-gnu/"
         # cc_flags += " --target=wasm64"
         cc_flags += " -target cheerp"
-        cc_flags += " -D__LP64__"
+        cc_flags += " -arch i386"
         os.environ["CCFLAGS"] = cc_flags
 
     @staticmethod
@@ -53,7 +53,8 @@ class NuitkaPluginWebAssemblyWorkarounds(NuitkaPluginBase):
             "__linux__": "",
             "__x86_64__": "",
             # "__ILP32__": "1", # For Cheerp
-            # "__LP64__": "",
+            "_LP64": "1",
+            "__LP64__": "1",
             # "SIZEOF_LONG": "8",
             # "LONG_BIT": "64",
         }
