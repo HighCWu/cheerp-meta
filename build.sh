@@ -2,12 +2,12 @@
 mkdir cheerp
 cd cheerp
 export CHEERP_SRC=$PWD
-git clone https://github.com/leaningtech/cheerp-compiler
-git clone https://github.com/leaningtech/cheerp-utils
-git clone https://github.com/leaningtech/cheerp-newlib
-git clone https://github.com/leaningtech/cheerp-libcxx
-git clone https://github.com/leaningtech/cheerp-libcxxabi
-git clone https://github.com/leaningtech/cheerp-libs
+git clone https://github.com/leaningtech/cheerp-compiler --depth=1
+git clone https://github.com/leaningtech/cheerp-utils --depth=1
+git clone https://github.com/leaningtech/cheerp-newlib --depth=1
+git clone https://github.com/leaningtech/cheerp-libcxx --depth=1
+git clone https://github.com/leaningtech/cheerp-libcxxabi --depth=1
+git clone https://github.com/leaningtech/cheerp-libs --depth=1
 
 # Build Cheerp LLVM/clang based compiler
 cd $CHEERP_SRC/cheerp-compiler
