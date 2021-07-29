@@ -1,4 +1,4 @@
-FROM ubuntu:bionic --platform=linux/amd64
+FROM --platform=linux/amd64 ubuntu:bionic
 FROM python:3.7
 
 RUN apt-get update && apt-get -y install cmake
