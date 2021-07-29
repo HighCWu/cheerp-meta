@@ -93,3 +93,6 @@ cd $CHEERP_SRC/cheerp-libs
 
 ## Cheerp optimized standard libraries
 make -C stdlibs install_asmjs INSTALL_PREFIX=/opt/cheerp CHEERP_PREFIX=/opt/cheerp
+
+# Finally
+rm -rf $CHEERP_SRC
