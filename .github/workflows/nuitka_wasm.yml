@@ -32,7 +32,7 @@ jobs:
         
       # Print cheerp marcos
       - name: Print cheerp marcos
-        run: /opt/cheerp/bin/clang -dM -E - < /dev/null
+        run: /opt/cheerp/bin/clang -arch amd64 -dM -E - < /dev/null
         
       # Nuitka build to WebAssembly test
       - name: Nuitka build to WebAssembly test
